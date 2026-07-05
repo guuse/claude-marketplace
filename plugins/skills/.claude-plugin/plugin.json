@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "skills",
+  "displayName": "Skills",
+  "description": "A collection of skills for Claude Code. Starts with autonomous, adversarial UX/QA testing (map flows, drive a real browser with Playwright, find bugs, fix them, and re-verify), and grows as more skills are added.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Guus Ekkelenkamp",
+    "email": "guus.ekkelenkamp@harborn.com"
+  },
+  "license": "MIT",
+  "keywords": ["skills", "qa", "testing", "e2e", "playwright", "ux", "browser-testing"]
+}

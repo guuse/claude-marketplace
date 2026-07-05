@@ -1,22 +1,21 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "alm-marketplace",
+  "name": "claude-marketplace",
   "owner": {
     "name": "Guus Ekkelenkamp",
     "email": "guus.ekkelenkamp@harborn.com"
   },
-  "description": "A Claude Code plugin marketplace for Application Lifecycle Management (ALM) tooling.",
+  "description": "A Claude Code plugin marketplace.",
   "metadata": {
     "pluginRoot": "./plugins"
   },
   "plugins": [
     {
-      "name": "alm",
-      "source": "./plugins/alm",
-      "description": "Application Lifecycle Management skills — autonomous QA/UX testing today, with room for more of the build → test → ship lifecycle.",
+      "name": "skills",
+      "source": "./plugins/skills",
+      "description": "A collection of skills for Claude Code.",
       "version": "0.1.0",
-      "keywords": ["alm", "qa", "testing", "e2e", "playwright", "ux"],
-      "category": "quality"
+      "keywords": ["skills", "qa", "testing", "e2e", "playwright", "ux"]
     }
   ]
 }

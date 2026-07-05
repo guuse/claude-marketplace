@@ -1,10 +1,9 @@
-# ALM Marketplace
+# Claude Marketplace
 
-A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces)
-for **Application Lifecycle Management (ALM)** tooling.
+A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces).
 
-It currently ships one plugin, `alm`, which bundles skills for the build → test →
-ship lifecycle. The first skill is autonomous, adversarial UX/QA testing.
+It ships one plugin, `skills`, which bundles all the skills. The first skill is
+autonomous, adversarial UX/QA testing.
 
 ## Repository layout
 
@@ -13,7 +12,7 @@ ship lifecycle. The first skill is autonomous, adversarial UX/QA testing.
 ├── .claude-plugin/
 │   └── marketplace.json         # marketplace manifest — lists the plugins
 ├── plugins/
-│   └── alm/                     # the ALM plugin
+│   └── skills/                  # the skills plugin
 │       ├── .claude-plugin/
 │       │   └── plugin.json      # plugin manifest
 │       └── skills/
@@ -27,9 +26,9 @@ ship lifecycle. The first skill is autonomous, adversarial UX/QA testing.
 
 ## Plugins
 
-### `alm`
+### `skills`
 
-Application Lifecycle Management skills for Claude Code.
+A collection of skills for Claude Code.
 
 | Skill | What it does |
 |-------|--------------|
@@ -41,18 +40,18 @@ Add this marketplace and install the plugin:
 
 ```bash
 /plugin marketplace add guuse/claude-marketplace
-/plugin install alm@alm-marketplace
+/plugin install skills@claude-marketplace
 ```
 
 (Or `/plugin marketplace add .` from a local clone.)
 
 Once installed, the `ux-testing` skill triggers automatically on requests like
 "test my app", "find the bugs", "try to break it", or "QA this" — or invoke it
-directly with `/alm:ux-testing`.
+directly with `/skills:ux-testing`.
 
 ## Adding more skills
 
-Drop a new `skills/<name>/SKILL.md` under `plugins/alm/skills/` (with optional
+Drop a new `skills/<name>/SKILL.md` under `plugins/skills/skills/` (with optional
 `scripts/`, `references/`, `assets/` alongside it). It's discovered automatically —
 no manifest change needed. To add a whole new plugin, create
 `plugins/<name>/.claude-plugin/plugin.json` and add an entry to
