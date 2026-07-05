@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "claude-marketplace",
+  "name": "guuse-marketplace",
   "owner": {
     "name": "Guus Ekkelenkamp",
     "email": "guus.ekkelenkamp@harborn.com"

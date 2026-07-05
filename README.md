@@ -40,7 +40,7 @@ Add this marketplace and install the plugin:
 
 ```bash
 /plugin marketplace add guuse/claude-marketplace
-/plugin install skills@claude-marketplace
+/plugin install skills@guuse-marketplace
 ```
 
 (Or `/plugin marketplace add .` from a local clone.)
