@@ -16,11 +16,15 @@ autonomous, adversarial UX/QA testing.
 │       ├── .claude-plugin/
 │       │   └── plugin.json      # plugin manifest
 │       └── skills/
-│           └── ux-testing/      # first skill
+│           ├── ux-testing/      # first skill
+│           │   ├── SKILL.md
+│           │   ├── scripts/     # detect_stack.py, wait_for_server.sh
+│           │   ├── references/  # app-analysis, flow-discovery, playwright-setup, fix-loop
+│           │   └── assets/      # playwright.config.ts
+│           └── multi-pass-review/
 │               ├── SKILL.md
-│               ├── scripts/     # detect_stack.py, wait_for_server.sh
-│               ├── references/  # app-analysis, flow-discovery, playwright-setup, fix-loop
-│               └── assets/      # playwright.config.ts
+│               ├── references/  # angles, briefs
+│               └── assets/      # review-workflow.js
 └── README.md
 ```
 
@@ -33,6 +37,7 @@ A collection of skills for Claude Code.
 | Skill | What it does |
 |-------|--------------|
 | `ux-testing` | Autonomously maps a web app's user flows, drives a real browser with Playwright, adversarially tries to break each flow, files a fix task per bug, dispatches a fixing agent per task, and re-runs each flow until it passes. |
+| `multi-pass-review` | Takes work to production quality with ordered review passes (e.g. animation → UX → frontend → text). Each pass runs parallel reviewer agents with separate angles, then fixer agents with clear file ownership, then re-checks until every angle passes on the shipped result. |
 
 ## Install
 
@@ -47,7 +52,9 @@ Add this marketplace and install the plugin:
 
 Once installed, the `ux-testing` skill triggers automatically on requests like
 "test my app", "find the bugs", "try to break it", or "QA this" — or invoke it
-directly with `/skills:ux-testing`.
+directly with `/skills:ux-testing`. `multi-pass-review` triggers on requests like
+"run all the passes with multiple agents", "review it until everything passes" or
+"make it production ready", or run it with `/skills:multi-pass-review`.
 
 ## Adding more skills
 
