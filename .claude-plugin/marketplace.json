@@ -14,8 +14,8 @@
       "name": "skills",
       "source": "./plugins/skills",
       "description": "A collection of skills for Claude Code.",
-      "version": "0.2.0",
-      "keywords": ["skills", "qa", "testing", "e2e", "playwright", "ux", "review", "multi-agent"]
+      "version": "0.3.0",
+      "keywords": ["skills", "qa", "testing", "e2e", "playwright", "ux", "review", "multi-agent", "design"]
     }
   ]
 }

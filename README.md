@@ -21,10 +21,14 @@ autonomous, adversarial UX/QA testing.
 │           │   ├── scripts/     # detect_stack.py, wait_for_server.sh
 │           │   ├── references/  # app-analysis, flow-discovery, playwright-setup, fix-loop
 │           │   └── assets/      # playwright.config.ts
-│           └── multi-pass-review/
+│           ├── multi-pass-review/
+│           │   ├── SKILL.md
+│           │   ├── references/  # angles, briefs
+│           │   └── assets/      # review-workflow.js
+│           └── design-exploration/
 │               ├── SKILL.md
-│               ├── references/  # angles, briefs
-│               └── assets/      # review-workflow.js
+│               ├── references/  # intake, rounds, templates
+│               └── assets/      # review-bar.js
 └── README.md
 ```
 
@@ -38,6 +42,7 @@ A collection of skills for Claude Code.
 |-------|--------------|
 | `ux-testing` | Autonomously maps a web app's user flows, drives a real browser with Playwright, adversarially tries to break each flow, files a fix task per bug, dispatches a fixing agent per task, and re-runs each flow until it passes. |
 | `multi-pass-review` | Takes work to production quality with ordered review passes (e.g. animation → UX → frontend → text). Each pass runs parallel reviewer agents with separate angles, then fixer agents with clear file ownership, then re-checks until every angle passes on the shipped result. |
+| `design-exploration` | Turns a rough idea into an agreed design. It asks the questions that matter, writes a brief and copy deck from real facts, builds several divergent directions as clickable mocks (published as artifacts), and narrows and refines them round by round on your feedback until you approve. Ends with a handoff spec for the build. |
 
 ## Install
 
@@ -54,7 +59,9 @@ Once installed, the `ux-testing` skill triggers automatically on requests like
 "test my app", "find the bugs", "try to break it", or "QA this" — or invoke it
 directly with `/skills:ux-testing`. `multi-pass-review` triggers on requests like
 "run all the passes with multiple agents", "review it until everything passes" or
-"make it production ready", or run it with `/skills:multi-pass-review`.
+"make it production ready", or run it with `/skills:multi-pass-review`. `design-exploration` triggers on requests
+like "make me some design options" or "let's explore what this could look like", or run
+it with `/skills:design-exploration`.
 
 ## Adding more skills
 
